@@ -12,7 +12,6 @@
     <form action="required.php" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="student_name" required>
-
         <br> <br>
         <label for="email">Email</label>
         <input type="email" name="student_email" id="email" required>
@@ -28,6 +27,38 @@
         <br> <br>
         <label for="passport">Passport Image</label>
         <input type="file"   accept=".png.jpg" name="student_passport" id="passport" required>
+        <br><br>
+        <label for="year">Year</label>
+        <select name="student_year" id="year">
+        <option value="">Choose your Year</option>
+        <option value="First">First Year</option>
+        <option value="Second">Second Year</option>
+        <option value="Third">Third Year</option>
+        </select>
+        <br><br>
+        <label for="">Gender</label>
+        <br><br>
+        <input type="radio" name="gender" id="male" value="male"><label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female"><label for="female">Female</label>
+        <br><br>
+        <label for="">Hobby</label>
+        <br><br>
+        <input type="checkbox" name="travelling"  id="travelling" value="Travelling"><label for="travelling">Travelling</label>
+        <input type="checkbox" name="gaming" id="gaming" value="Gaming"><label for="travelling">Gaming</label>
+        <input type="checkbox" name="reading" id="reading" value="Reading"><label for="travelling">Travelling</label>
+        <br><br>
+        <label for="address">Adress</label>
+        <textarea name="student_adress" id="address" rows="10" cols="50"></textarea>
+        <br><br>
+        <input type="text" name="" id="" required value="32">
+        <input type="text" name="" id="" readonly value="32">
+        <input type="email" name="" id="" placeholder="example@gmail.com">
+        <br><br>
+        <input type="time" name="" id="">
+        <input type="week" name="" id="">
+        <input type="datetime-local" name="" id="">
+        <input type="color" name="" id="">
+        <input type="range" name="" id="">
         <br><br>
         <button type="submit"> Save </button>
     </form>
