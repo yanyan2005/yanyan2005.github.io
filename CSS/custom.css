@@ -1,0 +1,41 @@
+/*unversial*/
+*{
+    /*color: red;*/
+    font-size: 20px;
+}
+
+/*tag / element*/
+
+h1{
+    color: blue;
+}
+/*attribute*/
+a[title="google"]{
+    color: green;
+    letter-spacing: 10px;
+}
+/*id selector*/
+#idone{
+    color: blue;
+    text-align: center;
+}
+/*class selector*/
+.classone{
+    color: brown;
+    line-height: 30px;
+    text-indent: 50px;
+    text-transform: capitalize;
+    word-spacing: 10px;
+}
+
+/*descendent */
+.desc a{
+    color:red;
+    text-decoration: none;
+}
+
+/*child */
+.child > a {
+    color: green;
+    text-decoration: none;
+}
