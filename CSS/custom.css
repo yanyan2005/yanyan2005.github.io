@@ -62,3 +62,54 @@ a:visited{
     color:red;
     border:2px solid black;
 }
+/*border Lesson*/
+.border1{
+    border: 10px solid black;
+}
+
+.border2{
+    border-left: 10px solid black;
+
+}
+
+.border_size_1{
+    border-style: solid;
+    /*border-width: 10px;*/
+    /*t r b l*/
+    /* border-width: 10px 100PX;*/
+    /*t&B /L&r */
+    /*border-width : 10px 100px 100px;*/
+    /*t /L&R /B */
+    border-width:1px 5px 10px 15px;
+    /*t r b l*/
+
+}
+
+.border_style{
+    border-style: solid dashed double dotted;
+    border-color: green red;
+}
+
+
+/*Margin Lesson*/
+.margin1{
+    margin: 50px;
+    border: 2px solid black;
+}
+/*padding*/
+.padding{
+    padding: 10px 50px 10px 60px;
+}
+
+/*layout*/
+.inline{
+    display: inline-block;
+    border: 1px solid red;
+    padding: 20px;
+}
+.block{
+    display: inline-block;
+    border: 1px solid red;
+    padding: 20px;
+    width: 300px;
+}
