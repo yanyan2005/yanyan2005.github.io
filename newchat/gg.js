@@ -1,15 +1,11 @@
 let currentUser = null;
 const users = ["KO KO", "Thel" , "admin"];  // Predefined users list
-let chatHistory = {}; // Store messages for each user
 let chatSize = 0; // Track total size of chat data (in bytes)
 const MAX_SIZE = 900 * 1024 * 1024; // 500MB in bytes
 
-// Load chat history from localStorage (if available)
+// Load chat history from Firebase (if available)
 window.onload = function () {
-    const savedChatHistory = localStorage.getItem('chatHistory');
-    if (savedChatHistory) {
-        chatHistory = JSON.parse(savedChatHistory);
-    }
+    loadChatHistory();  // Load chat history from Firebase
 };
 
 // Login event
@@ -19,7 +15,6 @@ document.getElementById('loginBtn').addEventListener('click', () => {
         currentUser = usernameInput;
         document.getElementById('userNameDisplay').innerText = currentUser;
         toggleChatScreen(true); // Show chat screen
-        displayChatHistory(); // Display chat history
     } else {
         alert("Please enter a valid username");
     }
@@ -32,10 +27,9 @@ document.getElementById('sendBtn').addEventListener('click', () => {
     if (messageInput || fileInput) {
         const message = createMessage(messageInput, fileInput);
         if (chatSize + message.size <= MAX_SIZE) {
-            saveMessage(message); // Save message to the current user’s chat
+            saveMessage(message); // Save message to Firebase
             displayMessage(message); // Display the message in the UI
             chatSize += message.size; // Track message size
-            localStorage.setItem('chatHistory', JSON.stringify(chatHistory)); // Store chat history in localStorage
             clearInputs(); // Clear input fields
         } else {
             alert("Maximum storage size reached! Please clear some data.");
@@ -53,9 +47,8 @@ document.getElementById('logoutBtn').addEventListener('click', () => {
 // Clear data event
 document.getElementById('clearBtn').addEventListener('click', () => {
     if (confirm("Are you sure you want to clear all data?")) {
-        chatHistory = {}; // Clear chat history
+        clearChatHistory(); // Clear chat history from Firebase
         chatSize = 0; // Reset chat size tracker
-        localStorage.removeItem('chatHistory'); // Remove from localStorage
         displayChatHistory(); // Refresh the chat history display
     }
 });
@@ -93,24 +86,32 @@ function createMessage(messageInput, fileInput) {
     };
 }
 
-// Save message to chat history
+// Save message to Firebase Realtime Database
 function saveMessage(message) {
-    if (!chatHistory[currentUser]) {
-        chatHistory[currentUser] = []; // Initialize empty array for this user if not present
-    }
+    const messageData = {
+        user: message.user,
+        text: message.text,
+        timestamp: message.timestamp,
+        file: message.file,
+        size: message.size
+    };
     
-    // Append the new message to the chat history for this user
-    chatHistory[currentUser].push(message);
+    // Save message under the current user's chat node
+    firebase.database().ref('chats/' + currentUser).push(messageData);
 }
 
-// Display chat history specific to the current user
-function displayChatHistory() {
+// Load chat history from Firebase
+function loadChatHistory() {
     const chatBox = document.getElementById('chatBox');
     chatBox.innerHTML = ''; // Clear current chat box
 
-    users.forEach(user => {
-        if (chatHistory[user]) {
-            chatHistory[user].forEach(message => displayMessage(message));
+    // Listen for changes to the chat history in Firebase
+    firebase.database().ref('chats').on('value', (snapshot) => {
+        const data = snapshot.val();
+        for (const user in data) {
+            if (data[user]) {
+                data[user].forEach(message => displayMessage(message));
+            }
         }
     });
 }
@@ -142,4 +143,9 @@ function displayMessage(message) {
 
     chatBox.appendChild(messageDiv);
     chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+}
+
+// Clear chat history in Firebase
+function clearChatHistory() {
+    firebase.database().ref('chats/' + currentUser).remove();
 }
