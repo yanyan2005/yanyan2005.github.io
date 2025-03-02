@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .logo {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            margin: 8px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .optional-field {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .optional-field span {
+            background: #e9ecef;
+            padding: 10px;
+            border-right: 1px solid #ccc;
+        }
+        .optional-field input {
+            border: none;
+            flex: 1;
+        }
+        button {
+            background:blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background:#007bff;
+        }
+        p {
+            margin-top: 10px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo1.webp" alt="Strategy First International College" class="logo">
+        <h2>Strategy First International College</h2>
+        <form action="#" method="post">
+            <input type="text" placeholder="Full name" required>
+            <input type="email" placeholder="Email address" required>
+            <input type="tel" placeholder="Phone number" required>
+            <input type="date" placeholder="DD/MM/YYYY" required>
+            <div class="optional-field">
+                <span>Optional</span>
+                <input type="text" placeholder="Enter SFU Student ID">
+            </div>
+            <input type="password" placeholder="Create password" required>
+            <input type="password" placeholder="Confirm password" required>
+            <button type="submit">Create Account</button>
+        </form>
+        <p>Have an account? <a href="">Login</a></p>
+    </div>
+</body>
+</html>
