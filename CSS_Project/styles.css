@@ -130,6 +130,11 @@ body {
     width:300px;
     height:450px;
     border-radius: 5px;
+    transition: transform 0.8s ease-in-out;
+}
+
+.class-right:hover img{
+        transform: scale(1.1);
 }
 .campus h3{
     text-align: center;
@@ -275,7 +280,6 @@ body {
 .management-section h2 {
     font-size: 24px;
     font-weight: bold;
-    color: #222;
 }
 
 
@@ -515,6 +519,7 @@ body {
     background-color: #3b6ec2;
     border-radius: 5px;
 }
+
 .card-text {
     margin: 15px 0;
     font-size: 16px;
@@ -538,6 +543,49 @@ body {
     border: 1px solid black;
 
 }
+
+.read-container{
+    width: 800px;
+    height: 400px;
+    color: #0A0A52;
+    background-color: #d8e2e7;
+    margin:30px auto;
+    border: 1px solid #0A0A52;
+    border-radius: 5px;
+    line-height: 2.5rem;
+    
+}
+/*read more*/
+.read-container p{
+    max-width:500px;
+    margin-left: 150px;
+}
+.time-table{
+    margin: 20px auto;
+    background-color: #e0e6ea;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+}
+
+/*read more*/
+
+
 /*course card*/
 
 
@@ -626,14 +674,16 @@ footer {
     color:whitesmoke;
     padding: 20px 0;
     font-weight: bold;
+    height: 380px;
 }
 
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-between;
     flex-wrap: wrap;
-    max-width: 1400px;
+    max-width: 100%;
     margin: auto;
+    margin-left: 80px;
     line-height: 2rem;
     font-size:20px;
 }
@@ -644,9 +694,14 @@ footer {
     margin: 10px 0;
     
 }
+
+.footer-section ul li{
+    line-height: 25px;
+}
 .footer-section ul li a{
     text-decoration: none;
     color: white;
+    
 }
 .footer-section ul li a:hover{
     text-decoration: underline;

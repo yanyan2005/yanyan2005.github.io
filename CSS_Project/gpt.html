@@ -3,94 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    
+    <title>Class Schedule</title>
+    <link rel="stylesheet" href="styles.css">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f8f9fa;
-        }
-        .container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 300px;
-        }
-        .logo {
-            width: 80px;
-            margin-bottom: 10px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        input {
-            margin: 8px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .optional-field {
-            display: flex;
-            align-items: center;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 5px;
-        }
-        .optional-field span {
-            background: #e9ecef;
-            padding: 10px;
-            border-right: 1px solid #ccc;
-        }
-        .optional-field input {
-            border: none;
-            flex: 1;
-        }
-        button {
-            background:blue;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        button:hover {
-            background:#007bff;
-        }
-        p {
-            margin-top: 10px;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.time-table{
+    background-color: #e0e6ea;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+}
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="images/logo1.webp" alt="Strategy First International College" class="logo">
-        <h2>Strategy First International College</h2>
-        <form action="#" method="post">
-            <input type="text" placeholder="Full name" required>
-            <input type="email" placeholder="Email address" required>
-            <input type="tel" placeholder="Phone number" required>
-            <input type="date" placeholder="DD/MM/YYYY" required>
-            <div class="optional-field">
-                <span>Optional</span>
-                <input type="text" placeholder="Enter SFU Student ID">
-            </div>
-            <input type="password" placeholder="Create password" required>
-            <input type="password" placeholder="Confirm password" required>
-            <button type="submit">Create Account</button>
-        </form>
-        <p>Have an account? <a href="">Login</a></p>
+    <div class="time-table">
+        <table>
+            <tr>
+                <th>Start Date</th>
+                <td>28-11-2024</td>
+            </tr>
+            <tr>
+                <th>Time</th>
+                <td>2:00 PM - 4:00 PM</td>
+            </tr>
+            <tr>
+                <th>Class Day</th>
+                <td>Monday - Friday</td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>

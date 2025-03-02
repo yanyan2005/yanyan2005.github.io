@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduford</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="icon" href="images/logo.svg" type="image/webp" >
+    <title>Eduford</title>
 </head>
 <body>
-
     <nav class="navbar">
         <div class="logo">
             <img src="images/logo.svg" alt="University_Logo">
@@ -19,40 +18,48 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="course.html">Course</a></li>
+            <li><a href="course.html" class="active">Course</a></li>
             <li><a href="campus.html">Campus</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-   
     <main>
-        <section class="contact-section">
-            <h1 class="contact-title">Contact Us</h1>
-            <div class="contact-container">
-                <form class="contact-form">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-    
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-    
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-    
-                    
-    
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Write your message..."></textarea>
-                    <br>
-                    <button type="submit">Send</button>
-                </form>
-                <div class="contact-image">
-                    <img src="images/contact3.svg" alt="Contact Illustration">
-                </div>
+        <section class="read-container">
+                <h3 class="title">Diaploma In Web Development</h3>
+                <div class="underline"></div>
+                <h2 class="title">Description</h2>
+                <p>  Web Application နှင့် ပက်သက်သည့် နည်းပညာများကို သင်ကြားပေးမည်ဖြစ်ပါသည်။ IT နှင့် Internet နည်းပညာများကို စုစည်းပြီး လက်တွေ့လုပ်ငန်းခွင့်သို့ ဝင်ရောက်ရန် ရည်ရွယ်၍ သင်ကြားသော Diploma သင်တန်းဖြစ်ပါသည်။ Web Project များရေးဆွဲ၍ လက်တွေ့ရှင်းလင်းပြသရမည် ဖြစ်ပါသည်။ သင်တန်းကာလ (၉) လ ကြာမြင့်မည်ဖြစ်ပါသည်။</p>
+        </section>
+
+        <section class="timetable">
+            <h3 class="title">Time table</h3>
+            <div class="underline"></div>
+
+
+            <div class="time-table">
+                <table>
+                    <tr>
+                        <th>Start Date</th>
+                        <td>23-11-2024</td>
+                    </tr>
+                    <tr>
+                        <th>Time</th>
+                        <td>8:00 PM - 10:00 PM</td>
+                    </tr>
+                    <tr>
+                        <th>Class Day</th>
+                        <td>Monday - Friday</td>
+                    </tr>
+                    <tr>
+                        <th>Class type</th>
+                        <td>Online Class</td>
+                    </tr>
+                </table>
             </div>
         </section>
     </main>
-    
+    <!--footer-->
+
     <!--footer-->
 <footer>
     <div class="container">
@@ -106,6 +113,5 @@
 <div class="footer-bottom">
 <p>Copyright © 2025, Eduford. All Rights Reserved.</p>
 </div>
-
 </body>
 </html>
