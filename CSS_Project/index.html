@@ -5,11 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eduford</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="pop.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="icon" href="images/logo.svg" type="image/webp" >
 </head>
 <body>
+
+          <!-- Pop-up -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <h2>🎉 Special Offer! 🎉</h2>
+        <p>📚 Enroll now and get <b>10% OFF</b> on early registrations!</p>
+        <p>📅 Offer Ends: <b>November 31st</b></p>
+        <button class="btn course-btn" onclick="goToCourse()">Course</button> <br>
+        <button class="btn remove-btn" onclick="removePopup()">Remove</button>
+    </div>
+
+
+
     <nav class="navbar">
         <div class="logo">
             <img src="images/logo.svg" alt="University_Logo">

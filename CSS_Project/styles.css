@@ -5,6 +5,74 @@ body {
     margin:0;
 }
 
+/*pop up*/
+
+/* Overlay background with multiply effect */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    mix-blend-mode: multiply;
+    display: none;
+    z-index: 999;
+}
+
+/* Pop-up container (centered properly) */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background:gainsboro;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    display: none;
+    z-index: 1000;
+}
+
+/* Buttons */
+.btn {
+    width:70%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.course-btn {
+    padding: 10px 20px;
+    background:#0A0A52;
+    color: whitesmoke;
+}
+.course-btn:hover{
+    background-color:#2A2A72;
+    border: 1px solid #222;
+}
+
+.remove-btn {
+    background: black;
+    color: whitesmoke;
+
+}
+.remove-btn:hover{
+    background-color:rgba(0, 0, 0, 0.505);
+    color:whitesmoke;
+    border:1px solid #222;
+}
+
+
+
+
+/*pop up*/
+
 
 .intro_img{
     position: relative;
@@ -501,7 +569,7 @@ body {
 }
 .card {
     width: 300px;
-    height: 450px;
+    height: 500px;
     background-color: #e6e6e6;
     padding: 20px;
     text-align: center;
@@ -514,8 +582,8 @@ body {
     transform: translateY(-5px);
 }
 .card-img img {
-    width: 100%;
-    height: 180px;
+    width:100%;
+    height: 220px;
     background-color: #3b6ec2;
     border-radius: 5px;
 }
