@@ -22,3 +22,4 @@ function removePopup() {
 function goToCourse() {
     window.location.href = "course.html"; // Change this to your course page URL
 }
+
